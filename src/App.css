@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  font-family: 'IranYekan';
+
+}
+
+
+.IranYekan-extrabold {
+  font-family: 'IranYekanExtraBold';
+}
+
+.IranYekan-Light {
+  font-family: 'IranYekanLight';
+}
+
+.IranYekan-Thin {
+  font-family: 'IranYekanThin';
+}
+
+@font-face {
+  font-family: 'IranYekan';
+  src: url('../public/fonts/iranyekanwebregularfanum.ttf');
+}
+
+@font-face {
+  font-family: 'IranYekanExtraBold';
+  src: url('../public/fonts/iranyekanwebextraboldfanum.ttf');
+}
+
+@font-face {
+  font-family: 'IranYekanLight';
+  src: url('../public/fonts/iranyekanweblightfanum.ttf');
+}
+
+@font-face {
+  font-family: 'IranYekanThin';
+  src: url('../public/fonts/iranyekanwebthinfanum.ttf');
+}
+
+@media (min-width: 768px) {
+  body {
+    --tw-bg-opacity: 1;
+    background-color: rgb(247 248 250 / var(--tw-bg-opacity));
+  }
+}
+
+.Selected {
+  filter: invert(21%) sepia(20%) saturate(3177%) hue-rotate(199deg) brightness(98%) contrast(98%)
+}
+
+.animtedTime {
+  animation: colorChange 6s infinite;
+  animation-fill-mode: forwards;
+  background-color: #1BA781;
+}
+
+@keyframes colorChange {
+  0% {
+    width: 382px;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+.Loading {
+  animation: colorChanging 6s infinite;
+  background-color: #1BA781;
+}
+
+.wrap {
+  margin: 100px auto;
+  width: 130px;
+}
+
+
+.circle {
+  position: relative;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #E94E3D;
+  box-shadow: 60px -60px 0 2px #E94E3D, -60px -60px 0 2px #E94E3D, -60px 60px 0 2px #E94E3D, 60px 60px 0 2px #E94E3D, 0 0 0 2px #E94E3D;
+}
+
+
+
+.text {
+  position: absolute;
+  top: 38px;
+  left: 30px;
+  width: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font: 18px sans-serif;
+  transition: opacity .2s ease;
+}
+
+.circle:hover {
+  animation: border 0.4s ease 1 forwards;
+  cursor: none;
+}
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  border: 3px solid #ddd;
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(45deg);
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 3px solid #514b82;
+  animation: l18 2s linear;
+  animation-iteration-count: 1;
+}
+@keyframes l18 {
+    0%   {clip-path:polygon(50% 50%,0 0,0    0,0    0   ,0    0   ,0    0   )}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0   ,100% 0   ,100% 0   )}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    0   )}
+}
+
+@keyframes colorChanging {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.Box-Shadow {
+  -webkit-box-shadow: 10px -4px 80px 0px rgba(147, 152, 154, 0.8);
+  -moz-box-shadow: 10px -4px 80px 0px rgba(147, 152, 154, 0.8);
+  box-shadow: 10px -4px 80px 0px rgba(147, 152, 154, 0.8);
+}
+
+.AlertShadow {
+  -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.3);
+}
+
+.overflowScroll {
+  overflow: scroll !important;
+}
+
+.MessageBG {
+  background-color: rgba(203, 144, 68, 0.1);
+}
+
+.example ol li::before {
+  content: counter(li);
+  color: red;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl
+}
